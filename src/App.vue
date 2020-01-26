@@ -2,8 +2,11 @@
   <v-app>
     <v-container class="text-center">
       <h1 class="display-2 mt-5 mb-5">
-        Your reliable sugar d₳d₳ staking pool in Europe
+        Welcome to sugar d₳d₳
       </h1>
+      <h2 class="display-1 mt-5">
+        Your reliable staking pool in europe
+      </h2>
       <div class="mt-5 mb-5">
         <img src="@/assets/cardano-logo.png" width="25%" height="25%">
       </div>

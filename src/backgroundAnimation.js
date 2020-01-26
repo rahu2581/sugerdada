@@ -35,7 +35,7 @@ const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight,
 camera.position.z = 1000
 camera.position.y = 500
 camera.rotateZ(1.58)
-camera.rotateX(-0.7)
+camera.rotateX(-0.65)
 const scene = new Scene()
 const texture = createTexture()
 const particles = []
