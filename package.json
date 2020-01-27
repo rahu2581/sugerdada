@@ -5,7 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deployIndex": "s3-deploy './dist/index.html' --cwd './dist' --region eu-west-1 --bucket sugardada.eu --profile sugardada --noCache",
+    "deployImg": "s3-deploy './dist/img/**' --cwd './dist' --region eu-west-1 --bucket sugardada.eu --profile sugardada --cache 31536000",
+    "deployCss": "s3-deploy './dist/css/**' --cwd './dist' --region eu-west-1 --bucket sugardada.eu --profile sugardada --cache 31536000",
+    "deployJs": "s3-deploy './dist/js/**' --cwd './dist' --region eu-west-1 --bucket sugardada.eu --profile sugardada --cache 31536000",
+    "deployIcon": "s3-deploy './public/favicon.png' --cwd './public' --region eu-west-1 --bucket sugardada.eu --profile sugardada --cache 31536000",
+    "deploy": "yarn deployIndex; yarn deployImg; yarn deployCss; yarn deployJs; yarn deployIcon"
   },
   "dependencies": {
     "core-js": "^3.4.4",
@@ -22,6 +28,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^9.5.0",
+    "s3-deploy": "^1.4.0",
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-vuetify": "^2.0.3",
